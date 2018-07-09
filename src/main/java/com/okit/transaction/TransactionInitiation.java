@@ -16,15 +16,23 @@ public class TransactionInitiation  {
 
     public TransactionInitiation() { }
 
-    public TransactionInitiation(String reference) {        
-        this.reference = reference;
+    public TransactionInitiation(String ref) {        
+        reference = ref;
         attributes.add(new Attribute("email", 			"Email address", 	"true", "EMAILADDRESS"));
         attributes.add(new Attribute("phoneNumber", 	"Phone number", 	"true", "PHONENUMBER"));
         attributes.add(new Attribute("name", 			"Name", 			"true", "NAME"));
         attributes.add(new Attribute("address", 		"Address", 			"true", "ADDRESS"));
     }
+    
+    public void setRedirectUrl(String url) {
+    	redirectUrl = url;
+    }
+    
+    public void addLineItem(LineItem item) {
+    	lineItems.add(item);
+    }
 
-    public void addLineItem(int quantity, String description, int amount, String productCode) {
+    public void addLineItem(int quantity, String description, int amount, String productCode, String currency, String vat) {
         LineItem item = new LineItem();
         item.setQuantity(Integer.toString(quantity));
         item.setDescription(description);
@@ -33,7 +41,17 @@ public class TransactionInitiation  {
         item.setTotalAmount(Integer.toString(totalAmount));
         this.amount = Integer.toString(Integer.parseInt(this.amount) + totalAmount);
         item.setProductCode(productCode);
-        lineItems.add(item);
+        if (currency != null) {
+        	item.setCurrency(currency);
+        }
+        if (vat != null) {
+        	item.setVat(vat);
+        }
+        lineItems.add(item);    	
+    }
+    
+    public void addLineItem(int quantity, String description, int amount, String productCode) {
+    	addLineItem(quantity, description, amount, productCode, null, null);
     }
 
     @SerializedName("amount")    
