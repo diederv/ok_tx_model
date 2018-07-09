@@ -4,11 +4,12 @@ package com.okit.transaction;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SingleLineItemTransaction {
-
-    @SerializedName("-xmlns:ns2")
+	
+	@SerializedName("-xmlns:ns2")
     @Expose
     private String xmlnsNs2;
 
@@ -83,6 +84,34 @@ public class SingleLineItemTransaction {
     @SerializedName("permissions")
     @Expose
     private String permissions;
+    
+    public Transaction convert() {
+    	Transaction result = new Transaction();
+    	result.setXmlnsNs2(xmlnsNs2);
+    	result.setXmlnsNs3(xmlnsNs3);
+    	result.setXmlnsNs4(xmlnsNs4);
+    	result.setXmlnsNs5(xmlnsNs5);
+    	result.setAccount(account);
+    	result.setAmount(amount);
+    	result.setAttributes(attributes);
+    	result.setBillingType(billingType);
+    	result.setCurrency(currency);
+    	result.setGuid(guid);
+    	result.setId(id);
+    	result.setReference(reference);
+    	result.setService(service);
+    	result.setState(state);
+    	result.setTimestamp(timestamp);
+    	result.setType(type);
+    	result.setPermissions(permissions);
+    	
+    	result.setLandingPageUrl(landingPageUrl);
+    	List<LineItem> lineItemList = new ArrayList<LineItem>();
+    	lineItemList.add(lineItems);
+    	result.setLineItems(lineItemList);
+    	
+    	return result;
+    }
 
     public String getXmlnsNs2() {
         return xmlnsNs2;

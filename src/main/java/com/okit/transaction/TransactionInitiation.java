@@ -1,6 +1,5 @@
 package com.okit.transaction;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -8,40 +7,25 @@ import java.util.List;
 
 public class TransactionInitiation  {
 	
-    @SerializedName("amount")
-    @Expose
-    public String amount = "0";
 
-    @SerializedName("reference")
-    @Expose
-    public String reference;
-    
-    @SerializedName("lineItems")
-    @Expose
-    List<LineItems> lineItems = new ArrayList<LineItems>();
-
-    @SerializedName("attributes")
-    @Expose
-    List<Attributes> attributes = new ArrayList<Attributes>();
-
-    @SerializedName("redirectUrl")
-    @Expose
-    String redirectUrl = "https://i.ytimg.com/vi/MM9-fJgoL4A/maxresdefault.jpg";
-
+    private String amount = "0";
+    private String reference = null;
+    private String redirectUrl = null;
+    private List<LineItem> lineItems = new ArrayList<LineItem>();
+    private List<Attribute> attributes = new ArrayList<Attribute>();
 
     public TransactionInitiation() { }
 
     public TransactionInitiation(String reference) {        
         this.reference = reference;
-        attributes.add(new Attributes("email", 			"Email address", 	"true", "EMAILADDRESS"));
-        attributes.add(new Attributes("phoneNumber", 	"Phone number", 	"true", "PHONENUMBER"));
-        attributes.add(new Attributes("name", 			"Name", 			"true", "NAME"));
-        attributes.add(new Attributes("address", 		"Address", 			"true", "ADDRESS"));
-
+        attributes.add(new Attribute("email", 			"Email address", 	"true", "EMAILADDRESS"));
+        attributes.add(new Attribute("phoneNumber", 	"Phone number", 	"true", "PHONENUMBER"));
+        attributes.add(new Attribute("name", 			"Name", 			"true", "NAME"));
+        attributes.add(new Attribute("address", 		"Address", 			"true", "ADDRESS"));
     }
 
     public void addLineItem(int quantity, String description, int amount, String productCode) {
-        LineItems item = new LineItems();
+        LineItem item = new LineItem();
         item.setQuantity(Integer.toString(quantity));
         item.setDescription(description);
         item.setAmount(Integer.toString(amount));
@@ -51,5 +35,32 @@ public class TransactionInitiation  {
         item.setProductCode(productCode);
         lineItems.add(item);
     }
+
+    @SerializedName("amount")    
+	public String getAmount() {
+		return amount;
+	}
+
+    @SerializedName("reference")    
+	public String getReference() {
+		return reference;
+	}
+
+    @SerializedName("lineItems")    
+	public List<LineItem> getLineItems() {
+		return lineItems;
+	}
+
+    @SerializedName("attributes")    
+	public List<Attribute> getAttributes() {
+		return attributes;
+	}
+    
+    @SerializedName("redirectUrl")    
+	public String getRedirectUrl() {
+		return redirectUrl;
+	}
+    
+    
 
 }
