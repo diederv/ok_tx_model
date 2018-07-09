@@ -4,7 +4,7 @@ package com.okit.transaction;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class LineItems {
+public class LineItem {
 
     @SerializedName("allowCampaigns")
     @Expose

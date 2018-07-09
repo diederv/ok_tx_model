@@ -3,7 +3,7 @@ package com.okit.transaction;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Attributes {
+public class Attribute {
 
     @SerializedName("key")
     @Expose
@@ -25,7 +25,7 @@ public class Attributes {
     @Expose
     private String value;
 
-    public Attributes(String key, String label, String required, String type) {
+    public Attribute(String key, String label, String required, String type) {
         setKey(key);
         setLabel(label);
         setRequired(required);

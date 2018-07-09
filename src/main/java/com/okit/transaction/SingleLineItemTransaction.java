@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class Transaction {
+public class SingleLineItemTransaction {
 
     @SerializedName("-xmlns:ns2")
     @Expose
@@ -58,7 +58,7 @@ public class Transaction {
 
     @SerializedName("lineItems")
     @Expose
-    private List<LineItem> lineItems;
+    private LineItem lineItems;
 
     @SerializedName("reference")
     @Expose
@@ -180,11 +180,11 @@ public class Transaction {
         this.landingPageUrl = landingPageUrl;
     }
 
-    public List<LineItem> getLineItems() {
+    public LineItem getLineItems() {
         return lineItems;
     }
 
-    public void setLineItems(List<LineItem> lineItems) {
+    public void setLineItems(LineItem lineItems) {
         this.lineItems = lineItems;
     }
 
