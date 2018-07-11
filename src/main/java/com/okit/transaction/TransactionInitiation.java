@@ -11,7 +11,8 @@ public class TransactionInitiation  {
     private String amount = "0";
     private String reference = null;
     private String redirectUrl = null;
-    private List<LineItem> lineItems = new ArrayList<LineItem>();
+
+	private List<LineItem> lineItems = new ArrayList<LineItem>();
     private List<Attribute> attributes = new ArrayList<Attribute>();
 
     public TransactionInitiation() { }
@@ -79,6 +80,20 @@ public class TransactionInitiation  {
 		return redirectUrl;
 	}
     
-    
+    public void setAmount(String amount) {
+		this.amount = amount;
+	}
+
+	public void setReference(String reference) {
+		this.reference = reference;
+	}
+
+	public void setLineItems(List<LineItem> lineItems) {
+		this.lineItems = lineItems;
+	}
+
+	public void setAttributes(List<Attribute> attributes) {
+		this.attributes = attributes;
+	}
 
 }
