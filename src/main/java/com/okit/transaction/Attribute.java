@@ -31,6 +31,13 @@ public class Attribute {
         setRequired(required);
         setType(type);
     }
+    
+    public Attribute(UserAttribute value) {
+        setKey(value.key);
+        setLabel(value.label);
+        setRequired(Boolean.TRUE.toString());
+        setType(value.type);    	
+    }
 
     public String getKey() {
         return key;

@@ -235,4 +235,29 @@ public class Transaction {
     public void setPermissions(String permissions) {
         this.permissions = permissions;
     }
+    
+    public String getName() {
+    	return getAttribute("NAME");
+    }
+    
+    public String getAddress() {
+    	return getAttribute("ADDRESS");
+    }
+    
+    public String getPhoneNumbere() {
+    	return getAttribute("PHONENUMBER");
+    }
+    
+    public String getEmailAddress() {
+    	return getAttribute("EMAILADDRESS");
+    }    
+    
+    private String getAttribute(String name) {
+        for (Attribute attr : getAttributes()) {
+            if (name.equals(attr.getType())) {
+                return attr.getValue();                       
+            } 
+        }
+        return null;
+    }
 }

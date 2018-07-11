@@ -17,12 +17,11 @@ public class TransactionInitiation  {
 
     public TransactionInitiation() { }
 
-    public TransactionInitiation(String ref) {        
-        reference = ref;
-        attributes.add(new Attribute("email", 			"Email address", 	"true", "EMAILADDRESS"));
-        attributes.add(new Attribute("phoneNumber", 	"Phone number", 	"true", "PHONENUMBER"));
-        attributes.add(new Attribute("name", 			"Name", 			"true", "NAME"));
-        attributes.add(new Attribute("address", 		"Address", 			"true", "ADDRESS"));
+    public TransactionInitiation(String reference, UserAttribute... attributes) {        
+        this.reference = reference;
+        for (UserAttribute attribute : attributes) {
+        	this.attributes.add(new Attribute(attribute));
+        }
     }
     
     public void setRedirectUrl(String url) {
