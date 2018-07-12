@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 
 public class AuthorisationResult {
-	
+	    
     @SerializedName("amount")
     @Expose
     private int amount;

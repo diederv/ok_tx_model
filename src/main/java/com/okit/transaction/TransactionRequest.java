@@ -1,23 +1,36 @@
 package com.okit.transaction;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TransactionInitiation  {
+public class TransactionRequest  {
 	
-
+    @SerializedName("amount")
+    @Expose
     private String amount = "0";
+    
+    @SerializedName("reference")
+    @Expose
     private String reference = null;
+    
+    @SerializedName("redirectUrl")
+    @Expose
     private String redirectUrl = null;
-
+    
+    @SerializedName("lineItems")
+    @Expose
 	private List<LineItem> lineItems = new ArrayList<LineItem>();
+    
+    @SerializedName("attributes")
+    @Expose
     private List<Attribute> attributes = new ArrayList<Attribute>();
 
-    public TransactionInitiation() { }
+    public TransactionRequest() { }
 
-    public TransactionInitiation(String reference, UserAttribute... attributes) {        
+    public TransactionRequest(String reference, UserAttribute... attributes) {        
         this.reference = reference;
         for (UserAttribute attribute : attributes) {
         	this.attributes.add(new Attribute(attribute));
