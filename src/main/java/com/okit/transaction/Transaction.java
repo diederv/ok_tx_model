@@ -84,6 +84,22 @@ public class Transaction {
     @Expose
     private String permissions;
 
+    @SerializedName("token")
+    @Expose
+    private String token;
+
+    @SerializedName("barcode")
+    @Expose
+    private String barcode;
+    
+    @SerializedName("description")
+    @Expose
+    private String description;
+    
+    @SerializedName("authorisationResult")
+    @Expose
+    private AuthorisationResult authorisationResult;
+    
     public String getXmlnsNs2() {
         return xmlnsNs2;
     }
@@ -236,6 +252,38 @@ public class Transaction {
         this.permissions = permissions;
     }
     
+	public String getToken() {
+		return token;
+	}
+
+	public void setToken(String token) {
+		this.token = token;
+	}
+
+	public String getBarcode() {
+		return barcode;
+	}
+
+	public void setBarcode(String barcode) {
+		this.barcode = barcode;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public AuthorisationResult getAuthorisationResult() {
+		return authorisationResult;
+	}
+
+	public void setAuthorisationResult(AuthorisationResult authorisationResult) {
+		this.authorisationResult = authorisationResult;
+	}
+	
     public String getName() {
     	return getAttribute("NAME");
     }
@@ -244,7 +292,7 @@ public class Transaction {
     	return getAttribute("ADDRESS");
     }
     
-    public String getPhoneNumbere() {
+    public String getPhoneNumber() {
     	return getAttribute("PHONENUMBER");
     }
     
@@ -259,5 +307,5 @@ public class Transaction {
             } 
         }
         return null;
-    }
+    }	
 }
