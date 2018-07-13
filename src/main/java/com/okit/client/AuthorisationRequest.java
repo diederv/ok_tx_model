@@ -1,4 +1,4 @@
-package com.okit.transaction;
+package com.okit.client;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +7,8 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class AuthorisationRequest {
+	
+	public final static String SIGNUP_ACTION = "Signup"; 
 
     @SerializedName("action")
     @Expose

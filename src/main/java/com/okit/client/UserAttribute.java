@@ -1,4 +1,4 @@
-package com.okit.transaction;
+package com.okit.client;
 
 public enum UserAttribute {	
 	
