@@ -14,11 +14,11 @@ public class Authorisation {
 
     @SerializedName("action")
     @Expose
-    private String guid;
+    private String action;
     
     @SerializedName("guid")
     @Expose
-    private String action;
+    private String guid;
     
     @SerializedName("id")
     @Expose
@@ -163,4 +163,29 @@ public class Authorisation {
 	public void setAuthorisationResult(AuthorisationResult authorisationResult) {
 		this.authorisationResult = authorisationResult;
 	}
+	
+    public String getName() {
+    	return getAttribute("NAME");
+    }
+    
+    public String getAddress() {
+    	return getAttribute("ADDRESS");
+    }
+    
+    public String getPhoneNumber() {
+    	return getAttribute("PHONENUMBER");
+    }
+    
+    public String getEmailAddress() {
+    	return getAttribute("EMAILADDRESS");
+    }    
+    
+    private String getAttribute(String name) {
+        for (Attribute attr : getAttributes()) {
+            if (name.equals(attr.getType())) {
+                return attr.getValue();                       
+            } 
+        }
+        return null;
+    }
 }

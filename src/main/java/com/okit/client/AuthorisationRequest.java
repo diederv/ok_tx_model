@@ -1,5 +1,7 @@
 package com.okit.client;
 
+import static com.okit.client.AuthorisationRequest.SIGNUP_ACTION;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,10 +28,13 @@ public class AuthorisationRequest {
     @Expose
     private List<Attribute> attributes = new ArrayList<Attribute>();
     
-    public AuthorisationRequest() { }
+    private AuthorisationRequest() { 
+    	setAction(SIGNUP_ACTION);
+    }
 
-    public AuthorisationRequest(String reference, UserAttribute... attributes) {        
-        this.reference = reference;
+    public AuthorisationRequest(String reference, UserAttribute... attributes) {
+    	this();
+        this.reference = reference;        
         for (UserAttribute attribute : attributes) {
         	this.attributes.add(new Attribute(attribute));
         }

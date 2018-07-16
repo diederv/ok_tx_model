@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class Transaction {
+public class Transaction extends Authorisation {
 
     @SerializedName("-xmlns:ns2")
     @Expose
@@ -24,17 +24,17 @@ public class Transaction {
     @Expose
     private String xmlnsNs5;
 
-    @SerializedName("account")
-    @Expose
-    private String account;
+//    @SerializedName("account")
+//    @Expose
+//    private String account;
 
-    @SerializedName("amount")
-    @Expose
-    private String amount;
+//    @SerializedName("amount")
+//    @Expose
+//    private String amount;
 
-    @SerializedName("attributes")
-    @Expose
-    private List<Attribute> attributes;
+//    @SerializedName("attributes")
+//    @Expose
+//    private List<Attribute> attributes;
 
     @SerializedName("billingType")
     @Expose
@@ -44,49 +44,49 @@ public class Transaction {
     @Expose
     private String currency;
 
-    @SerializedName("guid")
-    @Expose
-    private String guid;
+//    @SerializedName("guid")
+//    @Expose
+//    private String guid;
 
-    @SerializedName("id")
-    @Expose
-    private String id;
+//    @SerializedName("id")
+//    @Expose
+//    private String id;
 
-    @SerializedName("landingPageUrl")
-    @Expose
-    private String landingPageUrl;
+//    @SerializedName("landingPageUrl")
+//    @Expose
+//    private String landingPageUrl;
 
     @SerializedName("lineItems")
     @Expose
     private List<LineItem> lineItems;
 
-    @SerializedName("reference")
-    @Expose
-    private String reference;
+//    @SerializedName("reference")
+//    @Expose
+//    private String reference;
 
     @SerializedName("service")
     @Expose
     private String service;
 
-    @SerializedName("state")
-    @Expose
-    private String state;
+//    @SerializedName("state")
+//    @Expose
+//    private String state;
 
-    @SerializedName("timestamp")
-    @Expose
-    private String timestamp;
+//    @SerializedName("timestamp")
+//    @Expose
+//    private String timestamp;
 
     @SerializedName("type")
     @Expose
     private String type;
 
-    @SerializedName("permissions")
-    @Expose
-    private String permissions;
+//    @SerializedName("permissions")
+//    @Expose
+//    private String permissions;
 
-    @SerializedName("token")
-    @Expose
-    private String token;
+//    @SerializedName("token")
+//    @Expose
+//    private String token;
 
     @SerializedName("barcode")
     @Expose
@@ -96,9 +96,9 @@ public class Transaction {
     @Expose
     private String description;
     
-    @SerializedName("authorisationResult")
-    @Expose
-    private AuthorisationResult authorisationResult;
+//    @SerializedName("authorisationResult")
+//    @Expose
+//    private AuthorisationResult authorisationResult;
     
     public String getXmlnsNs2() {
         return xmlnsNs2;
@@ -132,29 +132,29 @@ public class Transaction {
         this.xmlnsNs5 = xmlnsNs5;
     }
 
-    public String getAccount() {
-        return account;
-    }
-
-    public void setAccount(String account) {
-        this.account = account;
-    }
-
-    public String getAmount() {
-        return amount;
-    }
-
-    public void setAmount(String amount) {
-        this.amount = amount;
-    }
-
-    public List<Attribute> getAttributes() {
-        return attributes;
-    }
-
-    public void setAttributes(List<Attribute> attributes) {
-        this.attributes = attributes;
-    }
+//    public String getAccount() {
+//        return account;
+//    }
+//
+//    public void setAccount(String account) {
+//        this.account = account;
+//    }
+//
+//    public String getAmount() {
+//        return amount;
+//    }
+//
+//    public void setAmount(String amount) {
+//        this.amount = amount;
+//    }
+//
+//    public List<Attribute> getAttributes() {
+//        return attributes;
+//    }
+//
+//    public void setAttributes(List<Attribute> attributes) {
+//        this.attributes = attributes;
+//    }
 
     public String getBillingType() {
         return billingType;
@@ -172,29 +172,29 @@ public class Transaction {
         this.currency = currency;
     }
 
-    public String getGuid() {
-        return guid;
-    }
-
-    public void setGuid(String guid) {
-        this.guid = guid;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getLandingPageUrl() {
-        return landingPageUrl;
-    }
-
-    public void setLandingPageUrl(String landingPageUrl) {
-        this.landingPageUrl = landingPageUrl;
-    }
+//    public String getGuid() {
+//        return guid;
+//    }
+//
+//    public void setGuid(String guid) {
+//        this.guid = guid;
+//    }
+//
+//    public String getId() {
+//        return id;
+//    }
+//
+//    public void setId(String id) {
+//        this.id = id;
+//    }
+//
+//    public String getLandingPageUrl() {
+//        return landingPageUrl;
+//    }
+//
+//    public void setLandingPageUrl(String landingPageUrl) {
+//        this.landingPageUrl = landingPageUrl;
+//    }
 
     public List<LineItem> getLineItems() {
         return lineItems;
@@ -204,13 +204,13 @@ public class Transaction {
         this.lineItems = lineItems;
     }
 
-    public String getReference() {
-        return reference;
-    }
-
-    public void setReference(String reference) {
-        this.reference = reference;
-    }
+//    public String getReference() {
+//        return reference;
+//    }
+//
+//    public void setReference(String reference) {
+//        this.reference = reference;
+//    }
 
     public String getService() {
         return service;
@@ -220,21 +220,21 @@ public class Transaction {
         this.service = service;
     }
 
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public String getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp(String timestamp) {
-        this.timestamp = timestamp;
-    }
+//    public String getState() {
+//        return state;
+//    }
+//
+//    public void setState(String state) {
+//        this.state = state;
+//    }
+//
+//    public String getTimestamp() {
+//        return timestamp;
+//    }
+//
+//    public void setTimestamp(String timestamp) {
+//        this.timestamp = timestamp;
+//    }
 
     public String getType() {
         return type;
@@ -244,21 +244,21 @@ public class Transaction {
         this.type = type;
     }
 
-    public String getPermissions() {
-        return permissions;
-    }
-
-    public void setPermissions(String permissions) {
-        this.permissions = permissions;
-    }
-    
-	public String getToken() {
-		return token;
-	}
-
-	public void setToken(String token) {
-		this.token = token;
-	}
+//    public String getPermissions() {
+//        return permissions;
+//    }
+//
+//    public void setPermissions(String permissions) {
+//        this.permissions = permissions;
+//    }
+//    
+//	public String getToken() {
+//		return token;
+//	}
+//
+//	public void setToken(String token) {
+//		this.token = token;
+//	}
 
 	public String getBarcode() {
 		return barcode;
@@ -276,36 +276,36 @@ public class Transaction {
 		this.description = description;
 	}
 
-	public AuthorisationResult getAuthorisationResult() {
-		return authorisationResult;
-	}
-
-	public void setAuthorisationResult(AuthorisationResult authorisationResult) {
-		this.authorisationResult = authorisationResult;
-	}
+//	public AuthorisationResult getAuthorisationResult() {
+//		return authorisationResult;
+//	}
+//
+//	public void setAuthorisationResult(AuthorisationResult authorisationResult) {
+//		this.authorisationResult = authorisationResult;
+//	}
 	
-    public String getName() {
-    	return getAttribute("NAME");
-    }
-    
-    public String getAddress() {
-    	return getAttribute("ADDRESS");
-    }
-    
-    public String getPhoneNumber() {
-    	return getAttribute("PHONENUMBER");
-    }
-    
-    public String getEmailAddress() {
-    	return getAttribute("EMAILADDRESS");
-    }    
-    
-    private String getAttribute(String name) {
-        for (Attribute attr : getAttributes()) {
-            if (name.equals(attr.getType())) {
-                return attr.getValue();                       
-            } 
-        }
-        return null;
-    }	
+//    public String getName() {
+//    	return getAttribute("NAME");
+//    }
+//    
+//    public String getAddress() {
+//    	return getAttribute("ADDRESS");
+//    }
+//    
+//    public String getPhoneNumber() {
+//    	return getAttribute("PHONENUMBER");
+//    }
+//    
+//    public String getEmailAddress() {
+//    	return getAttribute("EMAILADDRESS");
+//    }    
+//    
+//    private String getAttribute(String name) {
+//        for (Attribute attr : getAttributes()) {
+//            if (name.equals(attr.getType())) {
+//                return attr.getValue();                       
+//            } 
+//        }
+//        return null;
+//    }	
 }

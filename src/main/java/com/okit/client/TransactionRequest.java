@@ -28,9 +28,10 @@ public class TransactionRequest  {
     @Expose
     private List<Attribute> attributes = new ArrayList<Attribute>();
 
-    public TransactionRequest() { }
+    private TransactionRequest() { }
 
-    public TransactionRequest(String reference, UserAttribute... attributes) {        
+    public TransactionRequest(String reference, UserAttribute... attributes) { 
+    	this();
         this.reference = reference;
         for (UserAttribute attribute : attributes) {
         	this.attributes.add(new Attribute(attribute));
