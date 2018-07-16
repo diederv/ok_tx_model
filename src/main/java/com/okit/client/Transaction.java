@@ -28,9 +28,9 @@ public class Transaction extends Authorisation {
 //    @Expose
 //    private String account;
 
-//    @SerializedName("amount")
-//    @Expose
-//    private String amount;
+    @SerializedName("amount")
+    @Expose
+    private String amount;
 
 //    @SerializedName("attributes")
 //    @Expose
@@ -144,9 +144,9 @@ public class Transaction extends Authorisation {
 //        return amount;
 //    }
 //
-//    public void setAmount(String amount) {
-//        this.amount = amount;
-//    }
+    public void setAmount(String amount) {
+        this.amount = amount;
+    }
 //
 //    public List<Attribute> getAttributes() {
 //        return attributes;
