@@ -1,7 +1,5 @@
 package com.okit.client;
 
-import static com.okit.client.AuthorisationRequest.SIGNUP_ACTION;
-
 import java.util.ArrayList;
 import java.util.List;
 

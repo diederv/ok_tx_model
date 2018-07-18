@@ -15,7 +15,5 @@ public enum UserAttribute {
 		this.key = key;
 		this.label = label;
 		this.type = type;
-	}
-	
-	
+	}	
 }

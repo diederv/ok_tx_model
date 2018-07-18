@@ -24,6 +24,8 @@ public class Attribute {
     @SerializedName("value")
     @Expose
     private String value;
+    
+    public Attribute() { }
 
     public Attribute(String key, String label, String required, String type) {
         setKey(key);

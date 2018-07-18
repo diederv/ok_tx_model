@@ -28,7 +28,4 @@ public class Location {
 	public void setLon(String lon) {
 		this.lon = lon;
 	}
-	
-    
-    
 }
