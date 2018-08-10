@@ -39,4 +39,91 @@ public class Ticket {
 	@SerializedName("campaign")
 	private Campaign campaign;
 	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getGuid() {
+		return guid;
+	}
+
+	public void setGuid(String guid) {
+		this.guid = guid;
+	}
+
+	public String getIssuedTo() {
+		return issuedTo;
+	}
+
+	public void setIssuedTo(String issuedTo) {
+		this.issuedTo = issuedTo;
+	}
+
+	public TicketState getState() {
+		return state;
+	}
+
+	public void setState(TicketState state) {
+		this.state = state;
+	}
+
+	public String getExternalId() {
+		return externalId;
+	}
+
+	public void setExternalId(String externalId) {
+		this.externalId = externalId;
+	}
+
+	public String getBarcode() {
+		return barcode;
+	}
+
+	public void setBarcode(String barcode) {
+		this.barcode = barcode;
+	}
+
+	public Date getCreated() {
+		return created;
+	}
+
+	public void setCreated(Date created) {
+		this.created = created;
+	}
+
+	public Date getUsed() {
+		return used;
+	}
+
+	public void setUsed(Date used) {
+		this.used = used;
+	}
+
+	public String getData() {
+		return data;
+	}
+
+	public void setData(String data) {
+		this.data = data;
+	}
+
+	public BarcodeType getBarcodeType() {
+		return barcodeType;
+	}
+
+	public void setBarcodeType(BarcodeType barcodeType) {
+		this.barcodeType = barcodeType;
+	}
+
+	public Campaign getCampaign() {
+		return campaign;
+	}
+
+	public void setCampaign(Campaign campaign) {
+		this.campaign = campaign;
+	}	
 }
