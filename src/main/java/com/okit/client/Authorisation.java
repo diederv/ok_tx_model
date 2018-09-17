@@ -4,59 +4,45 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
 public class Authorisation {
 	
-    @SerializedName("account")
     @Expose
     private String account;
 
-    @SerializedName("action")
     @Expose
     private String action;
     
-    @SerializedName("guid")
     @Expose
     private String guid;
     
-    @SerializedName("id")
     @Expose
     private String id;
 
-    @SerializedName("landingPageUrl")
     @Expose
     private String landingPageUrl;
     
-    @SerializedName("redirectUrl")
     @Expose
     private String redirectUrl;
     
-    @SerializedName("reference")
     @Expose
     private String reference;
     
-    @SerializedName("state")
     @Expose
     private String state;
 
-    @SerializedName("timestamp")
     @Expose
     private String timestamp;
     
-    @SerializedName("token")
     @Expose
     private String token;
     
-    @SerializedName("permissions")
     @Expose
     private String permissions;
     
-    @SerializedName("attributes")
     @Expose
     private List<Attribute> attributes = new ArrayList<Attribute>();
     
-    @SerializedName("authorisationResult")
     @Expose
     private AuthorisationResult authorisationResult;
 
@@ -75,7 +61,7 @@ public class Authorisation {
 	public void setGuid(String guid) {
 		this.guid = guid;
 	}
-
+	
 	public String getAction() {
 		return action;
 	}
@@ -83,7 +69,7 @@ public class Authorisation {
 	public void setAction(String action) {
 		this.action = action;
 	}
-
+	
 	public String getId() {
 		return id;
 	}

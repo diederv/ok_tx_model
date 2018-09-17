@@ -4,6 +4,7 @@ package com.okit.client;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Transaction extends Authorisation {
@@ -23,38 +24,36 @@ public class Transaction extends Authorisation {
     @SerializedName("-xmlns:ns5")
     @Expose
     private String xmlnsNs5;
-
-    @SerializedName("amount")
+    
     @Expose
     private String amount;
 
-    @SerializedName("billingType")
     @Expose
     private String billingType;
 
-    @SerializedName("currency")
     @Expose
     private String currency;
 
-    @SerializedName("lineItems")
     @Expose
     private List<LineItem> lineItems;
 
-    @SerializedName("service")
     @Expose
     private String service;
 
-    @SerializedName("type")
     @Expose
     private String type;
 
-    @SerializedName("barcode")
     @Expose
     private String barcode;
     
-    @SerializedName("description")
     @Expose
     private String description;
+    
+    @Expose
+    private String paymentMethod;
+    
+    @Expose
+    private List<PaymentTransaction> paymentTransactions;
     
     public String getXmlnsNs2() {
         return xmlnsNs2;
@@ -87,10 +86,14 @@ public class Transaction extends Authorisation {
     public void setXmlnsNs5(String xmlnsNs5) {
         this.xmlnsNs5 = xmlnsNs5;
     }
-
+    
     public void setAmount(String amount) {
         this.amount = amount;
     }
+    
+	public String getAmount() {
+		return amount;
+	}
 
     public String getBillingType() {
         return billingType;
@@ -114,6 +117,13 @@ public class Transaction extends Authorisation {
 
     public void setLineItems(List<LineItem> lineItems) {
         this.lineItems = lineItems;
+    }
+    
+    public void addLineItem(LineItem lineItem) {
+    	if (lineItems == null) {
+    		lineItems = new ArrayList<LineItem>();
+    	}
+    	lineItems.add(lineItem);
     }
 
     public String getService() {
@@ -146,5 +156,21 @@ public class Transaction extends Authorisation {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public String getPaymentMethod() {
+		return paymentMethod;
+	}
+
+	public void setPaymentMethod(String paymentMethod) {
+		this.paymentMethod = paymentMethod;
+	}
+
+	public List<PaymentTransaction> getPaymentTransactions() {
+		return paymentTransactions;
+	}
+
+	public void setPaymentTransactions(List<PaymentTransaction> paymentTransactions) {
+		this.paymentTransactions = paymentTransactions;
 	}
 }

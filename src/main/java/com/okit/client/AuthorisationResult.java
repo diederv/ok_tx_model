@@ -6,31 +6,26 @@ import com.google.gson.annotations.SerializedName;
 
 public class AuthorisationResult {
 	    
-    @SerializedName("amount")
     @Expose
-    private int amount;
+    private String amount;
     
-    @SerializedName("reference")
     @Expose
     private String reference;
     
-    @SerializedName("result")    
     @Expose
     private String result;
     
-    @SerializedName("timestamp")    
     @Expose
     private String timestamp;
     
-    @SerializedName("location")
     @Expose
     private Location location;
 
-	public int getAmount() {
+	public String getAmount() {
 		return amount;
 	}
 
-	public void setAmount(int amount) {
+	public void setAmount(String amount) {
 		this.amount = amount;
 	}
 

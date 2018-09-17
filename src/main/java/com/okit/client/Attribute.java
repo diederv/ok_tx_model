@@ -27,11 +27,12 @@ public class Attribute {
     
     public Attribute() { }
 
-    public Attribute(String key, String label, String required, String type) {
+    public Attribute(String key, String label, String required, String type, String value) {
         setKey(key);
         setLabel(label);
         setRequired(required);
         setType(type);
+        setValue(value);
     }
     
     public Attribute(UserAttribute value) {

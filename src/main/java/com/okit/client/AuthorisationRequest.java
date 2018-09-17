@@ -10,19 +10,15 @@ public class AuthorisationRequest {
 	
 	public final static String SIGNUP_ACTION = "Signup"; 
 
-    @SerializedName("action")
     @Expose
     private String action = "0";
 
-	@SerializedName("reference")
 	@Expose
 	private String reference = "0";
 	
-    @SerializedName("redirectUrl")
     @Expose
     private String redirectUrl = "0";
     
-    @SerializedName("attributes")
     @Expose
     private List<Attribute> attributes = new ArrayList<Attribute>();
     
