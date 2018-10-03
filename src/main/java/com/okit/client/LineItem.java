@@ -1,6 +1,7 @@
 
 package com.okit.client;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.annotations.Expose;
@@ -173,10 +174,20 @@ public class LineItem {
     }
 
 	public List<SubItem> getSubItems() {
-		return subItems;
+		return subItems != null ? subItems : new ArrayList<SubItem>();
 	}
 
 	public void setSubItems(List<SubItem> subItems) {
 		this.subItems = subItems;
+	}
+	
+	public int getDiscountTotalAmount() {
+		int totalAmount = 0;
+		for (SubItem subItem : getSubItems()) {
+			if (subItem.getTotalAmount() != null) {
+				totalAmount += Integer.parseInt(subItem.getTotalAmount());
+			}
+		}
+		return totalAmount;
 	}
 }

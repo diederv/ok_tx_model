@@ -11,13 +11,16 @@ public class AuthorisationRequest {
 	public final static String SIGNUP_ACTION = "Signup"; 
 
     @Expose
-    private String action = "0";
+    private String action = null;
 
 	@Expose
-	private String reference = "0";
+	private String reference = null;
 	
     @Expose
-    private String redirectUrl = "0";
+    private String redirectUrl = null;
+    
+    @Expose
+    private String token = null;
     
     @Expose
     private List<Attribute> attributes = new ArrayList<Attribute>();
@@ -64,5 +67,13 @@ public class AuthorisationRequest {
 
 	public void setAttributes(List<Attribute> attributes) {
 		this.attributes = attributes;
+	}
+
+	public String getToken() {
+		return token;
+	}
+
+	public void setToken(String token) {
+		this.token = token;
 	}
 }

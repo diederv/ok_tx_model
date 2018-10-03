@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.okit</groupId>
   <artifactId>ok_tx_model</artifactId>
-  <version>0.4.2</version>
+  <version>0.4.9</version>
   <packaging>jar</packaging>
   <name>model</name>
   <url>http://maven.apache.org</url>
